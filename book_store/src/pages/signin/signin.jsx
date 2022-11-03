@@ -4,10 +4,11 @@ import Button from '@mui/material/Button';
 
 
 import TextField from '@mui/material/TextField';
+import { login } from '../../services/useraservices';
 
 const emailRegex = /^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
-function Signin() {
+function Signin(props) {
     const [LoginObj, setLoginObj] = useState({ email: "", password: "" });
     const [regexObj, setRegExObj] = useState({
         emailBorder: false,
@@ -22,6 +23,9 @@ function Signin() {
     const takePassword = (event) => {
         setLoginObj((prevState) => ({ ...prevState, password: event.target.value }));
     };
+    const changeSignUp = () => {
+      props.ListenToSignup(true)
+    }
 
     const OnSubmit = () => {
         let emailTest = emailRegex.test(LoginObj.email);
@@ -53,11 +57,23 @@ function Signin() {
             passwordHelper: "",
           }));
         }
+        console.log(LoginObj)
     
         if (emailTest === true && passwordTest === true) {
-            console.log("hitt the server");
+            login(LoginObj).then((response) => {
+              console.log(response);
+              localStorage.setItem("token",response.data.id)
+
+            })
+            .catch((error)=>{
+              console.log(error)
+            })
+            console.log("login success")
+
         }
-      };
+    }
+
+
 
     return (
         <div>
@@ -71,7 +87,7 @@ function Signin() {
                         <div className="buttons">
                            
                              <Button variant="text">Login</Button>
-                            <Button variant="text">Signup</Button>
+                            <Button variant="text"  onClick={changeSignUp}>Signup</Button>
                         </div>
                         <div className="Data">
                             <div className="inputdetails">

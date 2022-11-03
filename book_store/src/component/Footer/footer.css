@@ -1,0 +1,15 @@
+.FooterContainer{
+    /* border: 1px solid black; */
+    height: 9vh;
+    width: 100vw;
+    background-color: #2E1D1E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+.message{
+    margin-left: 10rem;
+}

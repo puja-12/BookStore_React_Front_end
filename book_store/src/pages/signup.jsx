@@ -2,13 +2,14 @@ import React from 'react'
 import './signup.css'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { signUp } from '../services/useraservices';
 
-const fullNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
+const fullNameRegex = /^[A-Z]{1}[a-z]{4}$/;
 const emailRegex =/^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$/;
 const passwordRegex =/^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 const mobileRegex =/^(\+\d{1,3}[- ]?)?\d{10}$/;
 
-function Signup() {
+function Signup(props) {
     const [SignUpObj, setSignUpObj] = React.useState({ fullName:"", email: "", password: "", mobile:"" });
     const [regexObj, setRegExObj] = React.useState({
         fullNameBorder: false,
@@ -33,6 +34,9 @@ function Signup() {
     const takeMobile = (event) => {
         setSignUpObj((prevState) => ({ ...prevState, mobile: event.target.value }));
     };
+    const ChangeLogin = () => {
+      props.ListenToSignup(false)
+  }
 
     const OnSubmit = () => {
         let fullNameTest = fullNameRegex.test(SignUpObj.fullName);
@@ -96,9 +100,19 @@ function Signup() {
           }
     
         if (fullNameTest === true && emailTest === true && passwordTest === true && mobileTest === true) {
-            console.log("hitt the server");
-        }
-      };
+          signUp(SignUpObj).then((response) => {
+            console.log(response);
+
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+        console.log("successfully created")
+
+    }
+
+
+}
     return (
         <div>
             <div class="signupContainer">
@@ -109,7 +123,7 @@ function Signup() {
                     </div>
                     <div class="table2">
                         <div className="buttons">
-                        <Button variant="text">Login</Button>
+                        <Button variant="text" onClick={ChangeLogin}>Login</Button>
                         <Button variant="text">Signup</Button>
                         </div>
                         <div className="inputdetails">
