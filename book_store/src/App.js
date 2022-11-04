@@ -5,6 +5,9 @@ import Signin from './pages/signin/signin';
 import OrderLogin from './component/Dashboard/dashboard';
 import Header from './component/Header/header';
 import Footer from './component/Footer/footer';
+import Books from './component/Books/book';
+import Home from './component/Home/home';
+import BookView from './component/BookView/bookView';
 
 function App() {
   return (
@@ -13,8 +16,12 @@ function App() {
      {/* <Signin /> */}
      {/* <OrderLogin /> */}
      {/* <AppBarOne /> */}
-     <Header />
-     <Footer/>
+     {/* <Header />
+     <Footer/> */}
+     {/* <Books /> */}
+     <Home />
+     {/* <BookView /> */}
+
     </div>
   );
 }
