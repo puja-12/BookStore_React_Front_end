@@ -62,7 +62,7 @@ function Signin(props) {
         if (emailTest === true && passwordTest === true) {
             login(LoginObj).then((response) => {
               console.log(response);
-              localStorage.setItem("token",response.data.id)
+              localStorage.setItem("token",response.data.result.accessToken)
 
             })
             .catch((error)=>{

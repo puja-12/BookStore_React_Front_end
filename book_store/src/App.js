@@ -8,6 +8,16 @@ import Footer from './component/Footer/footer';
 import Books from './component/Books/book';
 import Home from './component/Home/home';
 import BookView from './component/BookView/bookView';
+import Cart from './component/cart/cart';
+import AddressDetails from './component/AddressDetail/AddressDetail';
+
+import OrderSummary from './component/orderSummary/orderSummary';
+import { AppBar } from '@mui/material';
+// import Decrement from './component/increment/decrement';
+
+import Counter from './component/counter/counter';
+import RouterComponent from './component/Router/router';
+
 
 function App() {
   return (
@@ -15,11 +25,18 @@ function App() {
      {/* <Signup />   */}
      {/* <Signin /> */}
      {/* <OrderLogin /> */}
-     {/* <AppBarOne /> */}
-     {/* <Header />
-     <Footer/> */}
+     {/* <AppBar /> */}
+      {/* <Header /> */}
+     {/* <Footer/>  */}
      {/* <Books /> */}
      <Home />
+     {/* <Decrement /> */}
+     {/* <Cart /> */}
+     {/* <AddressDetails /> */}
+    {/* <Counter /> */}
+     {/* <OrderSummary /> */}
+     {/* <RouterComponent /> */}
+
      {/* <BookView /> */}
 
     </div>

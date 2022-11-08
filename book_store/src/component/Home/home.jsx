@@ -8,7 +8,7 @@ import Header from '../Header/header'
 import BookView from '../BookView/bookView'
 
 function Home() {
-  
+
 
   const [books, setbooks] = useState([])
   const [view, setview] = useState(true)
@@ -32,10 +32,10 @@ function Home() {
     <div>
       <Header />
       <div className='bookarray'>
-    
+
         {/* {booksarray}  */}
-     {
-          view ? booksarray  : <BookView selecbook={selecbook} /> 
+        {
+          view ? booksarray : <BookView selecbook={selecbook} />
         }
       </div>
       <Footer />

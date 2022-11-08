@@ -85,7 +85,7 @@ function Header() {
 
                     <PersonOutlineOutlinedIcon sx={{ position: 'relative', left: '350px' }} />
 
-                    <ShoppingCartOutlinedIcon sx={{ position: 'relative', left: '400px' }} />
+                    <ShoppingCartOutlinedIcon  sx={{ position: 'relative', left: '400px' }} />
 
 
 

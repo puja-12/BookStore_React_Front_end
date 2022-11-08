@@ -1,0 +1,87 @@
+.orderSummerycontainer {
+    border: 1px solid grey;
+    width: 60vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+   position: relative;
+   bottom:  120px;
+   left:  140px;
+  
+}
+
+.orderSummerytext {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font: normal normal bold 19px/17px Lato;
+    width: 70%;
+    height: 20%;
+}
+
+.orderSummerytext p {
+    margin-left: 5%;
+}
+
+.orderSummeryorderData {
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.orderItemimage {
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderItemimage img {
+    width: 70%;
+    height: 90%;
+}
+
+.orderData {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 60%;
+    height: 100%;
+}
+
+.checkoutbtn {
+    /* border: 1px solid red; */
+    width: 97%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkoutbtn button {
+    width: 20%;
+    height: 95%;
+}
+
+.checkoutbtn button {
+    background-color: #4266B2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cartItems-title{
+    font: normal normal normal small/100% Roboto;
+}

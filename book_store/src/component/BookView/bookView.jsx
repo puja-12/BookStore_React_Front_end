@@ -4,8 +4,46 @@ import Header from '../Header/header'
 import Button from '@mui/material/Button';
 
 import './bookView.css'
+import { addBookTocart, addWishList } from '../../services/dataservice';
+import Counter from '../counter/counter';
+
 
 function BookView(props) {
+    const [view2, setView2] = React.useState(true);
+ 
+      
+    
+  
+    const addedToWishlist = (id) => {
+        let data = {id :'id'} 
+        addWishList(data).then((response) => {
+            console.log(response)
+           
+        })
+            .catch((error) =>
+                console.log(error)
+            )
+            console.log ("book added to Wishlist")
+
+
+    }
+  
+      const AddToBeg = (id) => {
+        let Object = { id: 'id'}
+        setView2(false)
+        addBookTocart(Object).then((response) => {
+            console.log(response)
+           
+        })
+            .catch((error) =>
+                console.log(error)
+            )
+            console.log ("book added to beg")
+    }
+  
+
+    
+
 
     
     return (
@@ -20,8 +58,10 @@ function BookView(props) {
                     </div>
                     <div className="CartWishlist">
                         {/* <button className="addtobag" >ADD TO BAG</button> */}
-                        <Button variant="contained" style={{backgroundColor:'#A03037',width:'140px'}}>ADD TO BAG</Button>
-                        <Button variant="contained" style={{backgroundColor:'black',width:'140px'}}>WISHLIST</Button>
+                        {/* <Button variant="contained" style={{backgroundColor:'#A03037',width:'140px'}} >ADD TO BAG</Button> */}
+                        {view2 ? <Button variant="contained" style={{backgroundColor:'#A03037',width:'140px'}} onClick={AddToBeg}>ADD TO BAG</Button>: <Counter />}
+
+                        <Button variant="contained" style={{backgroundColor:'black',width:'140px'}} onClick={addedToWishlist} >WISHLIST</Button>
                         {/* <button className="wishlist" >WISHLIST</button> */}
                     </div>
                 </div>
@@ -56,14 +96,14 @@ function BookView(props) {
                             <span style={{ fontSize: "20px", marginRight: "15px" }}>&#9734;</span>
                             <span style={{ fontSize: "20px", marginRight: "15px" }}>&#9734;</span>
                         </div>
-                        <input type="text" placeholder="write your review" />
+                        <input type="text" class="input1" placeholder="write your review" />
                         <Button variant="contained" style={{width:'70px',position:'relative',left:'450px'}}>SUBMIT</Button>
                     </div>
                     
                 </div>
             </div>
-           
-        </div>
+           </div>
+      
     )
 }
 

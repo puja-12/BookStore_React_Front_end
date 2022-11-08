@@ -1,0 +1,310 @@
+.cartContainer {
+    /* margin:8rem 0 0 10rem; */
+    display: flex;
+    flex-direction: column;
+}
+
+.inputDetails {
+    /* border: 1px solid blue; */
+    margin: 10vh 10vw 0vh 10vw;
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* gap: 2rem */
+}
+
+.CartDetails {
+    /* margin-top: 20vh; */
+    border: 1px solid #DCDCDC;
+    height: 35vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* justify-content: space-evenly;
+    align-items: center; */
+    /* border: 1px solid blue; */
+}
+.Cart{
+
+   /* border: 1px solid #DCDCDC; */
+    height: 35vh;
+    width: 35vw;
+    
+}
+
+.bookContainer1 {
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 72%;
+    
+    /* border: 1px solid red; */
+  
+}
+
+.images1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    position: relative;
+    left:10px;
+    /* bottom:29px; */
+    /* margin: 10% 25% 10% 25%; */
+    /* border: 1px solid green; */
+}
+
+.details1 {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    width: 100%;
+    height: 60%;
+    position: relative;
+
+}
+
+.BA1 {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+.bookname1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    /* height: 20%; */
+    font: normal normal normal small/100% Roboto;
+    color: black;
+    margin-left: 10%;
+    margin-bottom: 0%;
+    /* border: 1px solid pink; */
+}
+
+.author1 {
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    /* height: 20%; */
+    font: normal normal normal x-small/100% Roboto;
+    color: #878787;
+    margin-left: 10%;
+    margin-bottom: 0%;
+}
+
+
+
+.quantity1 {
+    /* border: 1px solid yellow; */
+    width: 20%;
+    height: 13px;
+    font: normal normal normal 10px/13px Roboto;
+    color: #878787;
+    margin-left: 5%;
+}
+
+.PD1 {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+}
+
+
+.price1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 90%;
+    font: normal normal bold 12px/16px Roboto;
+    color: black;
+    margin-left: 10%;
+}
+
+.discountprice1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 90%;
+    text-decoration: line-through;
+    font: normal normal normal 10px/13px Roboto;
+    color: #878787;
+    position: relative;
+    right:30px;
+  
+
+}
+
+.LocationandPO1{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width: 35%;
+    height: 83%;
+    margin-top: 1.7%;
+}
+
+.locicon1{
+    border: 1px solid #DCDCDC;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+    margin-top: 5%;
+    /* justify-content: space-around; */
+    width: 80%;
+    height: 15%;
+}
+.Cloc{
+    border: 1px solid #DCDCDC;
+    width: 80%;
+    height: 13%;
+    margin-left: 7%;
+    font-size: small;
+    color: #0A0102;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.PlaceOrder1{
+    width: 40%;
+    margin-left: 50%;
+    margin-top: 30%;
+    background-color: #3371B5;
+    border: none;
+    height: 12%;
+    color: white;
+    border-radius: 2px;
+}
+/* .PlaceOrder1:after{
+    visibility: hidden;
+    display: none;
+} */
+.PlaceOrder1 button[type="onClick"]::after {
+    display: none; }
+
+.Addressdetais1 {
+    
+    width: 60vw;
+    height: 13%;
+    /* background: #FFFFFF 0% 0% no-repeat padding-box; */
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    margin-top: 2%;
+    font: normal normal normal 15px/18px Lato;
+    color: #333232;
+    position: relative;
+    bottom: 160px;
+    left: 140px;
+}
+
+.Addressdetais1 p {
+    margin-right: 78%;
+}
+
+.ordersummary1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 13%;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    margin-top: 2%;
+    font: normal normal normal 15px/18px Lato;
+    color: #333232;
+}
+
+.ordersummary1 p {
+    margin-left: 8%;
+}
+.increment {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 9px;
+    margin-left: 16px;
+}
+
+
+.minus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 24px;
+    height: 24px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    border-radius: 100%;
+    padding-left: 8px;
+    margin-left: 5px;
+    /* text-align: center; */
+    /* align-items: center; */
+}
+
+.itemss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 41px;
+    height: 24px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    border-radius: 1px;
+    margin-left: 5px;
+}
+
+.plus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    border-radius: 100%;
+    align-items: center;
+    /* padding-left: 7px; */
+    margin-left: 5px;
+
+}
+
+.remove {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 15px;
+    margin-top: 5px;
+    width: 48px;
+    height: 20px;
+    font: normal normal normal 14px/15px Lato;
+    letter-spacing: 0px;
+    color: #0A0102;
+    outline: none;
+    border: none;
+    background: transparent;
+}
