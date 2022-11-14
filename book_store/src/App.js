@@ -17,6 +17,10 @@ import { AppBar } from '@mui/material';
 
 import Counter from './component/counter/counter';
 import RouterComponent from './component/Router/router';
+import OrderSuccessfull from './component/orderSuccessfull/orderSuccessfil';
+import Wishlistpage from './component/Wishlist/wishlist';
+import GetCartPage from './component/getCartPage/getCartPage';
+
 
 
 function App() {
@@ -29,15 +33,19 @@ function App() {
       {/* <Header /> */}
      {/* <Footer/>  */}
      {/* <Books /> */}
-     <Home />
+     {/* <Home /> */}
      {/* <Decrement /> */}
      {/* <Cart /> */}
      {/* <AddressDetails /> */}
     {/* <Counter /> */}
      {/* <OrderSummary /> */}
-     {/* <RouterComponent /> */}
-
+     <RouterComponent />
+     {/* <OrderSuccessfull /> */}
+     {/* <Wishlistpage /> */}
+{/* <GetCartPage /> */}
      {/* <BookView /> */}
+     {/* <Wishlistpage /> */}
+     
 
     </div>
   );

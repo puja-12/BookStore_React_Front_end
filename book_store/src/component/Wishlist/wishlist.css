@@ -1,0 +1,49 @@
+.wishtext {
+    margin-top: 13vh;
+    /* border: 1px solid red; */
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 20vw;
+    font-weight: bold;
+}
+
+.wishtext h5 {
+    /* border: 1px solid red; */
+    color: grey;
+}
+
+.wishtext h4 {
+    /* border: 1px solid red; */
+    margin-left: 1%;
+}
+
+.mywishlist {
+    width: 60vw;
+    height: 70vh;
+    /* border: 1px solid grey; */
+    margin-left: 20vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mywish {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+}
+
+.mywish h3 {
+    margin-left: 5%;
+}
+
+.wisharray {
+    border: 1px solid rgba(128, 128, 128, 0.674);
+}

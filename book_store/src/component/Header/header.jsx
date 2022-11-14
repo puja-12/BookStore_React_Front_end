@@ -10,12 +10,27 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import Wishlistpage from '../Wishlist/wishlist';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 
 function Header() {
+
+
+    const Navigate = useNavigate()
+
+    const onWishlistClick = () => {
+        Navigate('/wishlist')
+    }
+    const onCart = () => {
+        Navigate('/cart')
+      }
+
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -55,6 +70,9 @@ function Header() {
             },
         },
     }));
+  
+
+   
 
     return (
 
@@ -85,7 +103,9 @@ function Header() {
 
                     <PersonOutlineOutlinedIcon sx={{ position: 'relative', left: '350px' }} />
 
-                    <ShoppingCartOutlinedIcon  sx={{ position: 'relative', left: '400px' }} />
+                    <ShoppingCartOutlinedIcon  sx={{ position: 'relative', left: '400px' }} onClick={onCart} />
+                   <LocalMallOutlinedIcon  sx={{ position: 'relative', left: '450px' }} onClick={onWishlistClick}/> 
+
 
 
 

@@ -9,20 +9,21 @@ function Books(props) {
         props.ListenToBookList()
         props.listenToEachBook(data)
     }
+    console.log(props.book,"book is getting")
 
 return (
 
     <div>
         <div className="bookContainer"
       onClick={() => Showbookdata(props.book)}>
-            <div className="bookimg">
-                <div className="images">
+            <div className="bookimg1">
+                <div className="images1">
                     <img style={{ height: '100%', width: '100%' }} src='images/bookimg.png' alt="book" />
                 </div>
             </div>
-            <div className="information">
+            <div className="information1">
                 <div className='BA'>
-                    <p className="bookname">Don't Make Me Think</p>
+                    <p className="name">{props.book.bookName}</p>
                     <p className="author">by 
                     {props.book.author}
                     </p>

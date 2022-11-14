@@ -9,14 +9,14 @@
     margin-bottom: 28px;
 }
 
-.bookimg {
+.bookimg1 {
     width: 100%;
     height: 60%;
     background: #F5F5F5 0% 0% no-repeat padding-box;
     border: none;
 }
 
-.images {
+.images1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
     border: 1px solid green;
 }
 
-.information {
+.information1 {
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     height: 50%;
 }
 
-.bookname {
+.name {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -138,4 +138,24 @@
     text-decoration: line-through;
     font: normal normal normal 10px/13px Roboto;
     color: #878787;
+}
+@media screen and (min-width: 320px) and (max-width: 700px)
+ {
+    .bookContainer {
+        display: flex;
+        flex-direction: column;
+        width: 15vw;
+        height: 40vh;
+    }
+    .information1 {
+      
+        width: 100%;
+        height: 50%;
+    }
+    .discountprice {
+        position: relative;
+        left: 9px;
+        top:2px;
+     
+    }
 }

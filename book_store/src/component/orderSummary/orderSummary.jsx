@@ -2,10 +2,16 @@
 import React from 'react'
 import './orderSummary.css'
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function OrderSummary() {
+    const Navigate = useNavigate()
+
+    const onCheckout = () => {
+        Navigate('/OrderSuccessfull')
+      }
     
   return (
     <div className='orderSummerycontainer'>
@@ -29,7 +35,7 @@ function OrderSummary() {
             </div>
         </div>
         <div className="checkoutbtn">
-            <Button variant="contained" className='checkout'>checkout</Button>
+            <Button variant="contained" className='checkout' onClick={onCheckout}>checkout</Button>
         </div>
     </div>
   )

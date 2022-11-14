@@ -8,8 +8,8 @@
     margin-top: 2rem;
     margin-left: 20vw;
     position: relative;
-    bottom: 150px;
-    right:135px
+    bottom: 10px;
+    right:116px
 }
 
 .details {
@@ -158,8 +158,8 @@ input{
 
 .ordersummary2{
     position: relative;
-    bottom: 150px;
-    left:135px;
+    top: 20px;
+    left:154px;
     width: 125vh;
     height: 15%;
     border: 1px solid #DCDCDC;

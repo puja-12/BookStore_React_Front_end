@@ -1,22 +1,35 @@
 import React from 'react'
-import { addBookTocart, removeBookFromCart } from '../../services/dataservice';
+import { addBookTocart, itemQuantityInBeg, removeBookFromCart } from '../../services/dataservice';
 import './counter.css'
 
-function Counter() {
+function Counter(props) {
 
-    const initialCount = 0
-    const [quantity, setQuantity] = React.useState([initialCount])
-    
+
+    const [quantity, setQuantity] = React.useState(1)
+
 
     const addbook = () => {
-      
-        setQuantity(prevCount => prevCount+ 1)
+
+        setQuantity(prevCount => prevCount + 1)
     }
 
     const removebook = () => {
-        setQuantity(prevCount => prevCount - 1)
-        
+        if (quantity > 0) {
+            setQuantity(prevCount => prevCount - 1);
+        }
+        let data = {product_id: props.selecbook._id}
+        itemQuantityInBeg(data).then((response) => {
+            console.log(response)
+
+        })
+            .catch((error) =>
+                console.log(error)
+            )
+        console.log("book added to Wishlist")
+
+
     }
+
 
     return (
         <div>
@@ -30,8 +43,8 @@ function Counter() {
 
 
         </div>
-           
-           
+
+
     )
 }
 
