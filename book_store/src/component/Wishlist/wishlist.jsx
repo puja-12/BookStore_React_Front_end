@@ -6,8 +6,14 @@ import WishListMain from '../Wishlistpage/wishlistPage'
 import Header from '../Header/header'
 import { displayBooksFromWishlists } from '../../services/dataservice'
 import Footer from '../Footer/footer'
+import { useNavigate } from 'react-router-dom'
 
 function Wishlist() {
+    const Navigate = useNavigate()
+
+    const onCheckout = () => {
+        Navigate('/home')
+      }
 
     const [wish, setwish] = useState([])
 
@@ -23,7 +29,7 @@ function Wishlist() {
     }, [])
 
     const wisharray = wish.map((item) => (
-        <WishListMain item={item} />
+        <WishListMain item={item} id={item._id} />
     ))
 
 
@@ -32,7 +38,7 @@ function Wishlist() {
         <div>
             <Header />
             <div className='wishtext'>
-                <h5>Home /</h5> <h4> My Wishlist</h4>
+                <h5 onClick={onCheckout}>Home /</h5> <h4> My Wishlist</h4>
             </div>
             <div className="mywishlist">
                 <div className="mywish">

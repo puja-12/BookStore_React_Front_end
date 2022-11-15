@@ -7,9 +7,11 @@ import Books from '../Books/book'
 import Header from '../Header/header'
 import BookView from '../BookView/bookView'
 import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 
 
+
+
+const PER_PAGE = 8;
 
 
 function Home() {
@@ -19,13 +21,18 @@ function Home() {
   const [view, setview] = useState(true)
   const [selecbook, setselecbook] = useState("")
 
+// User is currently on this page
+const [currentPage, setCurrentPage] = useState(1);
+// No of Records to be displayed on each page   
+const [recordsPerPage] = useState(5);
 
-  // const [page, setPage] = useState(1)
-  
-  // const handleChange = (e, p) => {
-  //   console.log(e,p)
-  //   setPage(p)
-  // }
+const indexOfLastRecord = currentPage * recordsPerPage;
+const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+
+const handleChange = (event, value) => {
+  setCurrentPage(value);
+};
+
 
 
   const ListenToBookList = () => {
@@ -38,7 +45,7 @@ function Home() {
   }
 
 
-  const booksarray = books.map(book => (<Books book={book} books={books} ListenToBookList={ListenToBookList} listenToEachBook={() => listenToEachBook(book)} />))
+  const booksarray = books.slice(indexOfFirstRecord, indexOfLastRecord).map(book => (<Books book={book} books={books} ListenToBookList={ListenToBookList} listenToEachBook={() => listenToEachBook(book)} />))
   // console.log(books.length)
   useEffect(() => {
     getBooks().then((response) => { console.log(response); setbooks(response.data.result) })
@@ -61,9 +68,17 @@ function Home() {
           view ? booksarray : <BookView id={books._id} selecbook={selecbook} />
         }
       </div>
-      {/* <Pagination count={8} 
-      defaultPage={6} onChange={handleChange} style={{position:'relative',left:'520px'}}
-      /> */}
+      {/* <Pagination count={11} defaultPage={6} siblingCount={0} />  */}
+      <Pagination
+        count={6}
+        size="large"
+        // page={page}
+        variant="outlined"
+        shape="rounded"
+        onChange={handleChange}
+        style={{ position: "relative", left: "500px" }}
+      />
+
       <Footer />
     </div>
   )

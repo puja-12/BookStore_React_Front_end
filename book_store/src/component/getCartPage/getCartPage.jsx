@@ -46,17 +46,18 @@ function GetCartPage(props) {
     }
 
     const removebook = () => {
-        // let Object = {  cartItem_id : props.item._id }
+        console.log(props.item,"Book removed from Cart")
+
+        let Object = {  'cartItem_id' : props.item._id }
         // console.log(Object, "check id passing")
 
-        removeBookFromCart(  props.item._id).then((response) => {
+        removeBookFromCart(  Object).then((response) => {
             console.log(response)
 
         })
             .catch((error) =>
                 console.log(error)
             )
-        console.log(props.item,"Book removed from Cart")
 
     }
 

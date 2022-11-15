@@ -41,7 +41,7 @@ function BookView(props) {
             .catch((error) =>
                 console.log(error)
             )
-            console.log ("book added to beg")
+            console.log (props.selecbook,"book added to beg")
     }
 //   console.log(props,"props in bookview")
     
@@ -67,7 +67,9 @@ function BookView(props) {
                     </div>
                 </div>
                 <div className="bkname">
-                    <h2 className="bknme">Don't Make Me Think</h2>
+                    <h2 className="bknme">{props.selecbook.bookName} 
+                    {/* Don't Make Me Think */}
+                    </h2>
                     <p className="athrname"> by {props.selecbook.author}  </p>
                     <div className="rtng">
                         <div className="rtngbtn">4.5*</div>
