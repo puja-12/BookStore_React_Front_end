@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Header() {
+function Header(props) {
 
 
     const Navigate = useNavigate()
@@ -31,31 +31,25 @@ function Header() {
         Navigate('/cart')
       }
 
+      const searchBooks = (event) => {
+        props.showSearchedBooks(event.target.value);
+    }
+      
+
     const Search = styled('div')(({ theme }) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
         backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
+        
         marginRight: theme.spacing(2),
         marginLeft: 0,
-        width: '100%',
         [theme.breakpoints.up('sm')]: {
             marginLeft: theme.spacing(3),
-            width: 'auto',
+           
         },
     }));
 
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
+   
 
     const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
@@ -89,14 +83,19 @@ function Header() {
                     >
                         Bookstore
                     </Typography>
-                    <Search sx={{ position: "relative", left: "120px", height: "40px" }}>
-                        <SearchIconWrapper >
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase sx={{ width: "600px", height: "39px", }}
+                    <Search sx={{ position: "relative", left: "160px", height: "40px",background:"white", cursor: "pointer",width:"550px" }}  >
+                        
+                            <SearchIcon sx={{ position: "relative", right: "240px", height: "40px", color:"grey"}} />
+                   
+                        <StyledInputBase sx={{ width: "600px", height: "39px", position: "relative",left:"10px", bottom: "45px",color:"grey"}}
+                           type="text"
                             placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
+                           
+    
+                            onChange={searchBooks}
+                           
                         />
+                        
                     </Search>
 
 
